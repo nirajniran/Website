@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Car Website Design - Easy Tutorials</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2021/challenger/vlp/desktop/2021-dodge-challenger-vlp-gallery-4.jpg);
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: multiply;
+            background-position: center;
+            background-size: cover;
+            padding: 0 7%;
+            transition: background-image 1s;
+
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .logo {
+            width: 220px;
+            cursor: pointer;
+
+        }
+
+        nav ul {
+            flex: 1;
+            text-align: center;
+
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 10px 20px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+        nav .btn {
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #fff;
+            padding: 10px 30px;
+            border-radius: 30px;
+            margin-right: 7%;
+
+        }
+
+        .info {
+            width: 100%;
+            padding: 0 7%;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            position: fixed;
+            bottom: 50px;
+            left: 0;
+
+        }
+
+        .info div {
+            margin: 0 20px;
+
+        }
+
+        .info div h2 {
+            font-size: 30px;
+            font-weight: 400;
+
+        }
+
+        .info .line {
+            flex: 1;
+            background: #fff;
+            height: 4px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <nav>
+            <img src="data:image/png;base64,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" class="logo">
+            <ul>
+                <li><a href="https://www.dodge.com/bmo.charger.2021.html#/model/CUD202104" id="charger">Charger</a></li>
+                <li><a href="https://www.dodge.com/bmo.challenger.2021.html#/models/2021/challenger?app=bmo&pageType=vehiclepage&vehicle=challenger&year=2021" id="challenger">Challanger</a></li>
+                <li><a href="https://www.dodge.com/bmo.durango.2021.html#/model/CUD202111" id="durango">Durango</a></li>
+                <li><a href="https://www.ramtrucks.com/?_ga=2.159476925.1401493885.1645178349-662979333.1645178349" id="trucks">Trucks</a></li>
+            </ul>
+            <a href="https://e-shop.dodge.com/t1?vin=2C3CDZC9XMH680303&dealercode=08011&vehicle_type=new#vehicleInformation" class="btn">Reserve Now</a>
+
+        </nav>
+        <div class="info">
+            <div>
+                <h2>3.25 s</h2>
+                <p>60 mph</p>
+            </div>
+            <div>
+                <h2>203 mph</h2>
+                <p>Top Speed</p>
+            </div>
+            <div>
+                <h2>407 mi</h2>
+                <p>Max Range</p>
+            </div>
+            <div class="line">
+            </div>
+            <div>
+                <h2 id="model">SRT Hellcat Redeye</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
